@@ -1,0 +1,37 @@
+{
+  "id": "DATATABLE.1667",
+  "lead_source": "Post Identified Project",
+  "country": "LK",
+  "country_name": "Sri Lanka",
+  "specific_location": "Western Province",
+  "title": "Sri Lankan Airlines",
+  "project_number": "NSB/SL/1601",
+  "industry": "Transportation and Warehousing",
+  "ita_industries": [
+    "Transport and Logistics",
+    "Distribution and Logistics"
+  ],
+  "project_size": 50000000,
+  "description": "$STATE description",
+  "tags": "Airlines",
+  "publish_date": "2016-07-06",
+  "end_date": "2016-08-24",
+  "funding_source": "Other",
+  "borrowing_entity": "Not Applicable",
+  "procurement_organization": "Ministry of Transport and Civil Aviation",
+  "contact": "NSB Fund Management Col. Ltd. National Savings Bank Head Office, 255 Galle Road, Colombo 3, Sri Lanka Phone: +94-11-257-3179; fax: +94-11-246-7618; e-mail: sl@nsb.lk",
+  "comments": "The value stated is not the correct value it is only for uploading purposes.",
+  "submitting_officer": "William Humnicky",
+  "submitting_officer_contact": "HumnickyWP@state.gov",
+  "url": "http://bit.ly/STSTST",
+  "status": "Pipeline",
+  "source": "STATE",
+  "trade_regions": [
+    "Global System of Trade Preferences among Developing Countries",
+    "South Asian Association for Regional Cooperation"
+  ],
+  "world_regions": [
+    "South Asia",
+    "Asia"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "CN1124562",
+  "agency": "Climate Change Authority",
+  "contract_value": "2900000.00",
+  "description": "Building Lease",
+  "parent_id": null,
+  "procurement_method": "Limited tender",
+  "publish_date_amended": null,
+  "status": "published",
+  "industry": "Lease and rental of property or building",
+  "ita_industries": [
+    "Real Estate Services"
+  ],
+  "project_number": "STD-000031-0",
+  "publish_date": "2013-01-04",
+  "start_date": "2012-05-30",
+  "end_date": "2017-08-14",
+  "country": "AU",
+  "country_name": "Australia",
+  "url": "http://bit.ly/AuAuAu",
+  "source": "AUSTRALIA",
+  "trade_regions": [
+    "Trans Pacific Partnership",
+    "Asia Pacific Economic Cooperation"
+  ],
+  "world_regions": [
+    "Oceania",
+    "Pacific Rim",
+    "Asia Pacific"
+  ]
+}

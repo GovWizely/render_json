@@ -1,0 +1,25 @@
+{
+  "id": "74632ea02baa7ba6cdbeaf8afadc9adb3a74bdf3",
+  "country": "LR",
+  "country_name": "Liberia",
+  "publish_date": "2016-07-18",
+  "url": "http://bit.ly/McMcMc",
+  "categories": [
+    "type/spn",
+    "CPV/79611000",
+    "CPV/79700000",
+    "deadline/2016/Aug/03"
+  ],
+  "title": "Job Vacancies",
+  "description": "$MCA description",
+  "funding_source": "Millennium Challenge Account (MCA)",
+  "source": "MCA",
+  "trade_regions": [
+    "African Growth and Opportunity Act"
+  ],
+  "world_regions": [
+    "West Africa",
+    "Africa",
+    "Sub-Saharan Africa"
+  ]
+}

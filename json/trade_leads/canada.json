@@ -1,0 +1,43 @@
+{
+  "id": "AVYHfbyacqAUet8uy-7J",
+  "country": "CA",
+  "country_name": "Canada",
+  "title": "INVITATION",
+  "reference_number": "PW-16-00740765",
+  "contract_number": "523202",
+  "publish_date": "2016-07-20",
+  "end_date": "2016-07-28",
+  "publish_date_amended": null,
+  "status": "Active",
+  "industry": [
+    "X111B - Leasing of Office Space"
+  ],
+  "ita_industries": [
+    "Real Estate Services"
+  ],
+  "specific_location": "Quebec",
+  "notice_type": "LI-DR-LOI-RFI",
+  "trade_agreement": "None",
+  "bid_type": "Open",
+  "competitive_procurement_strategy": null,
+  "non_competitive_procurement_strategy": null,
+  "procurement_organization": "Public Works and Government Services Canada",
+  "implementing_entity": "Public Works and Government Services Canada",
+  "description": "INVITATION TO SUBMIT",
+  "contact": "Côté, Francine, 514-496-3851, Place Bonaventure, portail Sud-Est, 800 rue de la Gauchetière Ouest, Suite 7300 Montréal QC H5A 1L6 CA, Place Bonaventure, portail Sud-Est, 800 rue de la Gauchetière Ouest, Suite 7300 Montréal QC H5A 1L6 CA",
+  "urls": [
+    "http://bit.ly/CaCaCa",
+    "http://bit.ly/CnCnCn"
+  ],
+  "source": "CANADA",
+  "trade_regions": [
+    "NAFTA",
+    "Trans Pacific Partnership",
+    "Asia Pacific Economic Cooperation"
+  ],
+  "world_regions": [
+    "North America",
+    "Western Hemisphere",
+    "Pacific Rim"
+  ]
+}

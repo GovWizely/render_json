@@ -1,0 +1,30 @@
+{
+  "id": "5faa6f05-1b3a-4acb-971b-557ed238a004",
+  "country": "GB",
+  "country_name": "United Kingdom",
+  "reference_number": "UI_DWP_101974",
+  "publish_date": "2016-06-27",
+  "min_contract_value": "400605.0",
+  "max_contract_value": null,
+  "status": "Open",
+  "url": "http://bit.ly/NNNNNN",
+  "procurement_organization": "DEPARTMENT FOR WORK AND PENSIONS",
+  "contact": "cd.londonfsf@dwp.gsi.gov.uk",
+  "title": "Employment",
+  "description": "$UK description",
+  "notice_type": "Contract",
+  "industry": [
+    "Education"
+  ],
+  "ita_industries": [
+    "Education"
+  ],
+  "specific_location": "North West",
+  "source": "UK",
+  "trade_regions": [
+    "European Union - 28"
+  ],
+  "world_regions": [
+    "Europe"
+  ]
+}
