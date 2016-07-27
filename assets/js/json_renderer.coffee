@@ -34,12 +34,43 @@ renderField = ($content, field, value) ->
   $wrapper.append value
   $content.append $wrapper
 
+renderTag = (key, value) ->
+  params = {}
+  params[key] = value
+  $params = $.param params
+
+  $link = $('<a />',
+    href: "#{window.rendererConfig.searchUrl}?#{$params}",
+    text: value)
+  $('<li />').append $link
+
+renderTags = (data) ->
+  $listItems = []
+  industries = data['industry']
+  $listItems.push renderTag('industries', industry) for industry in industries if industries?
+
+  $listItems.push renderTag('countries', data['country_name'])
+
+  world_regions = data['world_region']
+  $listItems.push renderTag('world_regions', region) for region in world_regions if world_regions?
+
+  trade_regions = data['trade_region']
+  $listItems.push renderTag('trade_regions', region) for region in trade_regions if trade_regions?
+
+  if $listItems.length > 0
+    $tags = $('<ul />',
+      id: 'tags')
+    $tags.append $listItems
+    $tags
+
 renderJSONResponse = (data) ->
   source = data.source
   $content = $(window.rendererConfig.contentSelector)
   fields = window.rendererTradeLeadMapping.fieldsBySource[source]
   return unless fields?
   renderField $content, field, data[field] for field in fields
+  $tags = renderTags data
+  $content.append $tags if $tags?
 
 renderNotFound = ->
   $(window.rendererConfig.contentSelector).append '<p>Not Found</p>'

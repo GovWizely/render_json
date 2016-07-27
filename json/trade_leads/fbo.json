@@ -1,33 +1,34 @@
 {
-  "id": "SBG30016R0003",
-  "notice_type": "MOD",
-  "publish_date": "2016-07-19",
-  "procurement_organization": "Department of State",
-  "procurement_office": "Southern Asian and Central Asian Posts",
-  "procurement_organization_address": "U.S. Embassy Dhaka, Bangladesh",
-  "classification_code": "91",
-  "industry": "424710: Petroleum Bulk Stations and Terminals",
-  "ita_industries": [
+  "id": "3a5bd00c8bab5741fb89721c02c3e8aeb8c61ec3",
+  "source": "FBO",
+  "contract_number": "sp0600-15-r-0210",
+  "url": "https://www.fbo.gov/spg/DLA/J3/DESC/SP0600-15-R-0210/listing.html",
+  "click_url": "https://goo.gl/pQz1PY",
+  "source_industry": "324110: Petroleum Refineries",
+  "industry": [
     "Petroleum Refineries"
   ],
-  "procurement_office_address": "Madani Avenue, Barldhara Dhaka 1 1212",
-  "title": "Solicitation",
-  "contract_number": "SBG30016R0003",
-  "end_date": "2016-07-31",
-  "contact": "David Nickerson, Contracting Officer, Phone 880255662344, Fax 880255662905, Email NickersonDK@state.gov - Md. Khan Jahan Ali, Phone 880255662158, Fax 880255662905, Email alimkj@state.gov",
-  "description": "$fbo description",
-  "competitive_procurement_strategy": "N/A",
-  "url": "http://bit.ly/FbFbFb",
-  "country": "BD",
-  "country_name": "Bangladesh",
-  "specific_address": "American Embassy, Dhaka, Bangladesh Dhaka",
-  "source": "FBO",
-  "trade_regions": [
-    "Global System of Trade Preferences among Developing Countries",
-    "South Asian Association for Regional Cooperation"
+  "publish_date": "2015-03-17T00:00:00+00:00",
+  "end_date": "2020-03-31T00:00:00+00:00",
+  "notice_type": "PRESOL",
+  "procurement_organization": "Defense Logistics Agency",
+  "procurement_office": "DLA Acquisition Locations",
+  "procurement_organization_address": "DLA Energy",
+  "classification_code": "91",
+  "procurement_office_address": "8725 John J. Kingman Road Fort Belvoir VA 22060-6222",
+  "title": "Basic Ordering Agreement (BOA) for Fuel in Iraq, Jordan, and Turkey",
+  "contact": "Heather M. Bushouse, Contract Specialist, Phone 7037679517, Fax 7037678506, Email heather.bushouse@dla.mil - Pamela Barber, Contracting Officer, Phone 7037678481, Fax 7037678506, Email Pamela.Barber@dla.mil",
+  "description": "DLA Energy - Direct Delivery Fuels (FEPDA) intends to establish Basic Ordering Agreements (BOAs)",
+  "competitive_procurement_strategy": null,
+  "country": "IQ",
+  "trade_region": [
+    "Organization of the Petroleum Exporting Countries",
+    "Global System of Trade Preferences among Developing Countries"
   ],
-  "world_regions": [
-    "South Asia",
-    "Asia"
-  ]
+  "world_region": [
+    "Persian Gulf Region",
+    "Middle East"
+  ],
+  "country_name": "Iraq",
+  "specific_address": "Various locations in Iraq, Jordan, and Turkey"
 }

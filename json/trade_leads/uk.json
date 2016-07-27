@@ -1,30 +1,36 @@
 {
-  "id": "5faa6f05-1b3a-4acb-971b-557ed238a004",
+  "id": "f31da36bf31a196aceffd60071c4e2366795de87",
+  "source": "UK",
   "country": "GB",
   "country_name": "United Kingdom",
-  "reference_number": "UI_DWP_101974",
-  "publish_date": "2016-06-27",
-  "min_contract_value": "400605.0",
-  "max_contract_value": null,
+  "record_id": "8487d77b-7b83-4ab5-bed6-11df948110fb",
+  "reference_number": "BUCKSH001-DN170856-85851506",
+  "publish_date": "2016-07-12T14:09:21+00:00",
+  "deadline_date": "2016-07-26T00:00:00+00:00",
+  "contract_start_date": "2016-10-10T00:00:00+00:00",
+  "contract_end_date": "2017-08-10T00:00:00+00:00",
+  "min_contract_value": 200000.0,
+  "max_contract_value": 200000.0,
+  "url": "http://www.buckscc.gov.uk",
+  "click_url": "http://goo.gl/cw3ZP",
   "status": "Open",
-  "url": "http://bit.ly/NNNNNN",
-  "procurement_organization": "DEPARTMENT FOR WORK AND PENSIONS",
-  "contact": "cd.londonfsf@dwp.gsi.gov.uk",
-  "title": "Employment",
-  "description": "$UK description",
+  "procurement_organization": "Buckinghamshire County Council",
+  "contact": "cculley@buckscc.gov.uk",
+  "title": "Great Missenden CofE School 1FE Expansion - Commerical Team EOI",
+  "description": "Applications to be considered for inclusion on the tender list are invited",
   "notice_type": "Contract",
-  "industry": [
-    "Education"
-  ],
-  "ita_industries": [
-    "Education"
-  ],
-  "specific_location": "North West",
-  "source": "UK",
-  "trade_regions": [
+  "specific_location": "Any region",
+  "trade_region": [
     "European Union - 28"
   ],
-  "world_regions": [
+  "world_region": [
     "Europe"
+  ],
+  "source_industry": [
+    "Construction and Real Estate"
+  ],
+  "industry": [
+    "Real Estate Services",
+    "Design and Construction"
   ]
 }

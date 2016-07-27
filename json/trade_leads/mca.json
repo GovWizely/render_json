@@ -1,9 +1,11 @@
 {
-  "id": "74632ea02baa7ba6cdbeaf8afadc9adb3a74bdf3",
+  "id": "5241707baaed415a6ba84f3fa0e3b9ebdea81145",
+  "guid": "http://www.dgmarket.com/tenders/np-notice.do?noticeId=14218352",
   "country": "LR",
   "country_name": "Liberia",
-  "publish_date": "2016-07-18",
-  "url": "http://bit.ly/McMcMc",
+  "publish_date": "2016-07-18T21:03:01-04:00",
+  "url": "http://www.dgmarket.com/tenders/np-notice.do?noticeId=14218352",
+  "click_url": "http://goo.gl/98Shvh",
   "categories": [
     "type/spn",
     "CPV/79611000",
@@ -11,13 +13,13 @@
     "deadline/2016/Aug/03"
   ],
   "title": "Job Vacancies",
-  "description": "$MCA description",
+  "description": "Buyer: \u003Ca href=\"http://www.dgmarket.com/tenders/adminShowBuyer.do?buyerId=6938382\"\u003EMILLENNIUM CHALLENGE ACCOUNT (MCA)\u003C/a\u003E",
   "funding_source": "Millennium Challenge Account (MCA)",
   "source": "MCA",
-  "trade_regions": [
+  "trade_region": [
     "African Growth and Opportunity Act"
   ],
-  "world_regions": [
+  "world_region": [
     "West Africa",
     "Africa",
     "Sub-Saharan Africa"

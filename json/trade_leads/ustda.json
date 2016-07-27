@@ -1,18 +1,24 @@
 {
-  "id": "60a6e1e9fd42b115255a28508c75190a86726d87",
-  "title": "Ethiopian",
-  "publish_date": "2016-07-08",
-  "end_date": "2016-07-28",
-  "description": "$USTDA description",
-  "url": "http://bit.ly/UUUUUU",
+  "id": "8664875d9a0c8c7cc9f4e78f5a9b7e3b68f4b4e3",
   "source": "USTDA",
-  "country": null,
-  "country_name": "Ethiopia",
-  "trade_regions": [
-    "African Growth and Opportunity Act"
+  "title": "Mexico: International Competitive Tender: Shared Network (Red Compartida) for Telecommunications Services",
+  "publish_date": "2016-01-29T00:00:00+00:00",
+  "end_date": "2016-08-08T00:00:00+00:00",
+  "description": "Background: The Government of Mexico",
+  "url": "https://www.ustda.gov/business-opportunities/trade-leads/mexico-international-competitive-tender-shared-network-red",
+  "click_url": null,
+  "country_name": "Mexico",
+  "country": "MX",
+  "trade_region": [
+    "Asia Pacific Economic Cooperation",
+    "Global System of Trade Preferences among Developing Countries",
+    "NAFTA",
+    "Trans Pacific Partnership"
   ],
-  "world_regions": [
-    "Africa",
-    "Sub-Saharan Africa"
+  "world_region": [
+    "North America",
+    "Pacific Rim",
+    "Latin America",
+    "Western Hemisphere"
   ]
 }

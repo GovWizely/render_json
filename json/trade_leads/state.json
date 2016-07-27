@@ -1,21 +1,24 @@
 {
-  "id": "DATATABLE.1667",
+  "id": "c118cb6ed4345bb33980b2dfb77303e2a561866a",
+  "record_id": "DATATABLE.1667",
   "lead_source": "Post Identified Project",
-  "country": "LK",
   "country_name": "Sri Lanka",
+  "country": "LK",
   "specific_location": "Western Province",
-  "title": "Sri Lankan Airlines",
+  "title": "EOI Sri Lankan Airlines and Mihin Lanka",
   "project_number": "NSB/SL/1601",
-  "industry": "Transportation and Warehousing",
-  "ita_industries": [
+  "source_industry": "Transportation and Warehousing",
+  "industry": [
     "Transport and Logistics",
     "Distribution and Logistics"
   ],
   "project_size": 50000000,
-  "description": "$STATE description",
-  "tags": "Airlines",
-  "publish_date": "2016-07-06",
-  "end_date": "2016-08-24",
+  "description": "Expression of Interest",
+  "tags": [
+    "Airlines"
+  ],
+  "publish_date": "2016-07-06T00:00:00+00:00",
+  "end_date": "2016-08-24T00:00:00+00:00",
   "funding_source": "Other",
   "borrowing_entity": "Not Applicable",
   "procurement_organization": "Ministry of Transport and Civil Aviation",
@@ -23,14 +26,15 @@
   "comments": "The value stated is not the correct value it is only for uploading purposes.",
   "submitting_officer": "William Humnicky",
   "submitting_officer_contact": "HumnickyWP@state.gov",
-  "url": "http://bit.ly/STSTST",
+  "url": "http://www.nsb.lk",
+  "click_url": "http://goo.gl/9YTq4z",
   "status": "Pipeline",
   "source": "STATE",
-  "trade_regions": [
+  "trade_region": [
     "Global System of Trade Preferences among Developing Countries",
     "South Asian Association for Regional Cooperation"
   ],
-  "world_regions": [
+  "world_region": [
     "South Asia",
     "Asia"
   ]

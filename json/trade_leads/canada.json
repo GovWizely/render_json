@@ -1,41 +1,69 @@
 {
-  "id": "AVYHfbyacqAUet8uy-7J",
-  "country": "CA",
-  "country_name": "Canada",
-  "title": "INVITATION",
-  "reference_number": "PW-16-00740765",
-  "contract_number": "523202",
-  "publish_date": "2016-07-20",
-  "end_date": "2016-07-28",
-  "publish_date_amended": null,
-  "status": "Active",
+  "id": "c9380be1b29809da24eb5dc360bd074dde4664f0",
+  "publish_date": "2015-07-09T00:00:00+00:00",
+  "end_date": "2016-07-29T00:00:00+00:00",
+  "publish_date_amended": "2016-03-14T00:00:00+00:00",
+  "source_industry": [
+    "N2840 - Gas Turbines and Jet Engines, Aircraft, Prime Moving and Components"
+  ],
   "industry": [
-    "X111B - Leasing of Office Space"
+    "Aircraft and Aircraft Parts"
   ],
-  "ita_industries": [
-    "Real Estate Services"
+  "url": [
+    "https://buyandsell.gc.ca/cds/public/2015/07/08/65ade50e10295606c7749c3dca73ebf6/ABES.PROD.PW__BB.B237.F25243.EBSU000.PDF",
+    "https://buyandsell.gc.ca/cds/public/2015/07/08/dc23d78a88534a27f1d9b399a9c1effc/ABES.PROD.PW__BB.B237.E25243.EBSU000.PDF",
+    "https://buyandsell.gc.ca/cds/public/2015/09/21/0db3eedc718fafcadd537eba76695c76/ABES.PROD.PW__BB.B237.E25243.EBSU001.PDF",
+    "https://buyandsell.gc.ca/cds/public/2015/09/21/538b89a07f9a924e83b1385e34ac19c8/ABES.PROD.PW__BB.B237.F25243.EBSU001.PDF",
+    "https://buyandsell.gc.ca/cds/public/2015/11/30/726967561c192b5313f53200188b77ec/ABES.PROD.PW__BB.B237.E25243.EBSU002.PDF",
+    "https://buyandsell.gc.ca/cds/public/2015/11/30/e26e8ef4b96b99aa78e21570340d1b9b/ABES.PROD.PW__BB.B237.F25243.EBSU002.PDF",
+    "https://buyandsell.gc.ca/cds/public/2016/01/29/5c2dc9db4c38ed638fe3fd0afd37549b/ABES.PROD.PW__BB.B237.F25243.EBSU003.PDF",
+    "https://buyandsell.gc.ca/cds/public/2016/01/29/6efda85a88e7f4cd305f672b982c8f6b/ABES.PROD.PW__BB.B237.E25243.EBSU003.PDF",
+    "https://buyandsell.gc.ca/cds/public/2016/02/07/6ee5575ed21013153eb35818e5eaf757/ABES.PROD.PW__BB.B237.F25243.EBSU004.PDF",
+    "https://buyandsell.gc.ca/cds/public/2016/02/07/de9a0ca7baf6475a84f0f0565e860e30/ABES.PROD.PW__BB.B237.E25243.EBSU004.PDF",
+    "https://buyandsell.gc.ca/cds/public/2016/02/22/2f1d0ac95e1fd8d207022ba4ae7baca5/ABES.PROD.PW__BB.B237.F25243.EBSU005.PDF",
+    "https://buyandsell.gc.ca/cds/public/2016/02/22/59d95d865607e664da3dbe22b0ee6f6a/ABES.PROD.PW__BB.B237.E25243.EBSU005.PDF",
+    "https://buyandsell.gc.ca/cds/public/2016/03/11/231306e5fb444ee494884b8e60b564f6/ABES.PROD.PW__BB.B237.F25243.EBSU006.PDF",
+    "https://buyandsell.gc.ca/cds/public/2016/03/11/dfd39d8ba0b4f2b9015c38c82806289a/ABES.PROD.PW__BB.B237.E25243.EBSU006.PDF"
   ],
-  "specific_location": "Quebec",
+  "click_url": [
+    "https://goo.gl/ARBFAz",
+    "https://goo.gl/BzF03W",
+    "https://goo.gl/D6dJOK",
+    "https://goo.gl/FI1vzh",
+    "https://goo.gl/ISqaaq",
+    "https://goo.gl/KMz13v",
+    "https://goo.gl/X78Gyg",
+    "https://goo.gl/YmwjOW",
+    "https://goo.gl/aKnMoE",
+    "https://goo.gl/g8B7jG",
+    "https://goo.gl/jwug90",
+    "https://goo.gl/k2buHJ",
+    "https://goo.gl/r4iTJh",
+    "https://goo.gl/t7cxid"
+  ],
+  "title": "T56/F404 Propulsion Group Sustainment (W8485-13DL02/B)",
+  "reference_number": "PW-$$BB-237-25243",
+  "contract_number": "W8485-13DL02/B",
+  "amendment_number": "000",
+  "publishing_status": "Active",
+  "specific_location": "Alberta, British Columbia, Manitoba, National Capital Region, New Brunswick, Newfoundland \u0026 Labrador, Northwest Territories, Nova Scotia, Nunavut, Ontario, Prince Edward Island, Quebec, Saskatchewan, Yukon",
   "notice_type": "LI-DR-LOI-RFI",
   "trade_agreement": "None",
-  "bid_type": "Open",
-  "competitive_procurement_strategy": null,
-  "non_competitive_procurement_strategy": null,
+  "bid_type": "All interested suppliers may submit a bid",
+  "competitive_procurement_strategy": "N/A - P\u0026A/LOI Only",
   "procurement_organization": "Public Works and Government Services Canada",
-  "implementing_entity": "Public Works and Government Services Canada",
-  "description": "INVITATION TO SUBMIT",
-  "contact": "Côté, Francine, 514-496-3851, Place Bonaventure, portail Sud-Est, 800 rue de la Gauchetière Ouest, Suite 7300 Montréal QC H5A 1L6 CA, Place Bonaventure, portail Sud-Est, 800 rue de la Gauchetière Ouest, Suite 7300 Montréal QC H5A 1L6 CA",
-  "urls": [
-    "http://bit.ly/CaCaCa",
-    "http://bit.ly/CnCnCn"
-  ],
+  "implementing_entity": "Department of National Defence",
+  "description": "Procurement Strategy: N/A - P\u0026A/LOI Only Comprehensive Land Claim",
+  "contact": "Ward, Kristen, (819) 956-0175 ( ), ( ) -, 11 Laurier St. / 11, rue Laurier 8C1, Place du Portage Gatineau Québec K1A 0S5, 11 Laurier St. / 11, rue Laurier 8C1, Place du Portage Gatineau Québec K1A 0S5",
+  "country": "CA",
+  "country_name": "Canada",
   "source": "CANADA",
-  "trade_regions": [
+  "trade_region": [
     "NAFTA",
     "Trans Pacific Partnership",
     "Asia Pacific Economic Cooperation"
   ],
-  "world_regions": [
+  "world_region": [
     "North America",
     "Western Hemisphere",
     "Pacific Rim"
