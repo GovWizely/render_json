@@ -2,12 +2,7 @@ require 'rubygems'
 require 'bundler'
 require 'rake'
 
-begin
-  require 'rspec/core/rake_task'
-  RSpec::Core::RakeTask.new(:spec)
-  task default: [:spec]
-rescue LoadError
-end
+require 'rspec/core/rake_task'
 
 desc 'build minified Javascript'
 task :build do
@@ -24,6 +19,10 @@ task :build do
   end.join("\n")
 
   File.open(root.join('assets/js/all.js'), 'w') do |f|
+    f.puts '/*** AUTO GENERATED FILE - DO NOT EDIT ***/'
     f.puts Uglifier.compile source
   end
 end
+
+RSpec::Core::RakeTask.new(:spec)
+task default: [:build, :spec]

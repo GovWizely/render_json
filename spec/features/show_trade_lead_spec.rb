@@ -5,6 +5,7 @@ RSpec.describe 'trade lead', type: :feature, js: true do
       expect(find_by_id('field_title').text).to eq('Title Research into local content use and understanding')
       expect(find_by_id('field_description').text).to eq('Description The ACMA is seeking a supplier to conduct research into local content arrangements including a regional focus.')
       expect(find_by_id('field_url')).to have_link('https://www.tenders.gov.au/?event=public.atm.show&ATMUUID=3CFB46F2-9693-0C82-DAFB7F2E007DEC4B')
+      expect(find_by_id('field_atm_id').text).to eq('ATM ID 16ACMA057')
       # binding.pry
       expect(find_link('Australia')[:href]).to eq('https://example.org/search#/search/trade_leads?countries=Australia')
       expect(find_link('Oceania')[:href]).to eq('https://example.org/search#/search/trade_leads?world_regions=Oceania')
