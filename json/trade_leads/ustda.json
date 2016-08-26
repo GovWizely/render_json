@@ -2,20 +2,19 @@
   "id": "8664875d9a0c8c7cc9f4e78f5a9b7e3b68f4b4e3",
   "source": "USTDA",
   "title": "Mexico: International Competitive Tender: Shared Network (Red Compartida) for Telecommunications Services",
-  "publish_date": "2016-01-29T00:00:00+00:00",
-  "end_date": "2016-08-08T00:00:00+00:00",
+  "published_at": "2016-01-29T10:00:00+00:00",
+  "end_at": "2016-08-08T10:00:00+00:00",
   "description": "Background: The Government of Mexico",
   "url": "https://www.ustda.gov/business-opportunities/trade-leads/mexico-international-competitive-tender-shared-network-red",
   "click_url": null,
-  "country_name": "Mexico",
-  "country": "MX",
-  "trade_region": [
+  "country": "Mexico",
+  "trade_regions": [
     "Asia Pacific Economic Cooperation",
     "Global System of Trade Preferences among Developing Countries",
     "NAFTA",
     "Trans Pacific Partnership"
   ],
-  "world_region": [
+  "world_regions": [
     "North America",
     "Pacific Rim",
     "Latin America",

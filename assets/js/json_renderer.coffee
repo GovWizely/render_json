@@ -1,6 +1,8 @@
 ---
 ---
 
+$ = jQuery
+
 getIdString = ->
   param_strings = window.location.search.substr(1).split('&')
   for param_string in param_strings
@@ -8,12 +10,39 @@ getIdString = ->
     if key_value[0] == 'id'
       return key_value[1]
 
-renderLink = (url) ->
-  $("<a href='#{url}'></a>").append(url)
+renderDate = (dateString) ->
+  date = new Date dateString
+  $('<span />',
+    text: date.toDateString())
+
+renderLink = (url, click_url) ->
+  click_url = url unless click_url?
+  $('<a />',
+    href: click_url,
+    text: url)
+
+renderLinks = (data, field) ->
+  urls = data[field]
+  return unless urls?
+
+  urls = [urls] unless urls instanceof Array
+
+  click_urls = data["click_#{field}"]
+  click_urls = [click_urls] unless click_urls instanceof Array
+
+  renderLink url, click_urls[i] for url, i in urls
 
 renderValue = (field, value) ->
   return unless value?
-  if /^url/.test(field) then renderLink(value) else $('<span></span>').append(value)
+  switch field
+    when 'title' then $('<h1 />', text: value)
+    when 'description' then $('<div />').append(value)
+    else
+      if /\_at/.test(field)
+        renderDate value
+      else if /^url/.test(field)
+        renderLink value, field, data
+      else $('<span />', text: value)
 
 renderArray = (field, array) ->
   return if array.length <= 0
@@ -21,41 +50,40 @@ renderArray = (field, array) ->
   $ul.append($('<li></li>').append(renderValue(field, item)) for item in array)
   $ul
 
-renderField = ($content, field, value) ->
-  if value instanceof Array
-    value = renderArray field, value
+renderField = ($content, field, data) ->
+  value = data[field]
+  if /^url/.test(field)
+    renderedValue = renderLinks data, field
+  else if value instanceof Array
+    renderedValue = renderArray field, value
   else
-    value = renderValue field, value
+    renderedValue = renderValue field, value
 
-  return unless value?
-  $wrapper = $("<p id='field_#{field}'></p>")
-  friendlyName = window.rendererTradeLeadMapping.friendlyNames[field]
-  $wrapper.append "<div>#{friendlyName}</div>"
-  $wrapper.append value
+  return unless renderedValue?
+  $wrapper = $('<p />', id: "field_#{field}")
+  friendlyName = $content.data('friendlyNames')[field]
+  $wrapper.append $('<div />', text: friendlyName) unless field in ['description', 'title']
+  $wrapper.append renderedValue
   $content.append $wrapper
 
-renderTag = (key, value) ->
+renderTag = (searchUrl, key, value) ->
   params = {}
   params[key] = value
   $params = $.param params
 
   $link = $('<a />',
-    href: "#{window.rendererConfig.searchUrl}?#{$params}",
+    href: "#{searchUrl}?#{$params}",
     text: value)
   $('<li />').append $link
 
-renderTags = (data) ->
+renderTags = (searchUrl, data) ->
   $listItems = []
-  industries = data['industry']
-  $listItems.push renderTag('industries', industry) for industry in industries if industries?
 
-  $listItems.push renderTag('countries', data['country_name'])
+  country = data['country']
+  $listItems.push renderTag(searchUrl, 'countries', country) if country?
 
-  world_regions = data['world_region']
-  $listItems.push renderTag('world_regions', region) for region in world_regions if world_regions?
-
-  trade_regions = data['trade_region']
-  $listItems.push renderTag('trade_regions', region) for region in trade_regions if trade_regions?
+  industries = data['industries']
+  $listItems.push renderTag(searchUrl, 'industries', industry) for industry in industries if industries?
 
   if $listItems.length > 0
     $tags = $('<ul />',
@@ -63,22 +91,24 @@ renderTags = (data) ->
     $tags.append $listItems
     $tags
 
-renderJSONResponse = (data) ->
-  source = data.source
-  $content = $(window.rendererConfig.contentSelector)
-  fields = window.rendererTradeLeadMapping.fieldsBySource[source]
+renderJSONResponse = (jsonData) ->
+  source = jsonData.source
+  $content = $(this)
+  fields = $content.data('fieldsBySource')[source]
   return unless fields?
-  renderField $content, field, data[field] for field in fields
-  $tags = renderTags data
+  renderField $content, field, jsonData for field in fields
+  $tags = renderTags $content.data('searchUrl'), jsonData
   $content.append $tags if $tags?
 
 renderNotFound = ->
-  $(window.rendererConfig.contentSelector).append '<p>Not Found</p>'
+  $(this).append '<p>Not Found</p>'
 
-requestJSON = (id) ->
-  url = "#{window.rendererConfig.hostUrl}#{encodeURIComponent(id)}?api_key=#{encodeURIComponent(window.rendererConfig.apiKey)}"
+requestJSON = (element, id) ->
+  $element = $(element)
+  url = "#{$element.data('hostUrl')}#{encodeURIComponent(id)}"
   $.ajax
     contentType: 'text/plain',
+    context: element,
     type: 'GET',
     url: url,
     xhrFields: {
@@ -87,10 +117,10 @@ requestJSON = (id) ->
     success: renderJSONResponse,
     error: renderNotFound
 
-
-ready = ->
-  idString = getIdString()
-  if idString? then requestJSON(idString) else renderNotFound()
-
-$ -> ready()
-
+$.fn.renderJSON = (options) ->
+  this.each ->
+    idString = getIdString()
+    $this = $(this)
+    for key in Object.getOwnPropertyNames options
+      $this.data key, options[key]
+    if idString? then requestJSON(this, idString) else renderNotFound.call(this)

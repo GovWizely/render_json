@@ -4,12 +4,11 @@
   "contract_number": "sp0600-15-r-0210",
   "url": "https://www.fbo.gov/spg/DLA/J3/DESC/SP0600-15-R-0210/listing.html",
   "click_url": "https://goo.gl/pQz1PY",
-  "source_industry": "324110: Petroleum Refineries",
-  "industry": [
+  "industries": [
     "Petroleum Refineries"
   ],
-  "publish_date": "2015-03-17T00:00:00+00:00",
-  "end_date": "2020-03-31T00:00:00+00:00",
+  "published_at": "2015-03-17T10:00:00+00:00",
+  "end_at": "2020-03-31T10:00:00+00:00",
   "notice_type": "PRESOL",
   "procurement_organization": "Defense Logistics Agency",
   "procurement_office": "DLA Acquisition Locations",
@@ -20,15 +19,14 @@
   "contact": "Heather M. Bushouse, Contract Specialist, Phone 7037679517, Fax 7037678506, Email heather.bushouse@dla.mil - Pamela Barber, Contracting Officer, Phone 7037678481, Fax 7037678506, Email Pamela.Barber@dla.mil",
   "description": "DLA Energy - Direct Delivery Fuels (FEPDA) intends to establish Basic Ordering Agreements (BOAs)",
   "competitive_procurement_strategy": null,
-  "country": "IQ",
-  "trade_region": [
+  "trade_regions": [
     "Organization of the Petroleum Exporting Countries",
     "Global System of Trade Preferences among Developing Countries"
   ],
-  "world_region": [
+  "world_regions": [
     "Persian Gulf Region",
     "Middle East"
   ],
-  "country_name": "Iraq",
+  "country": "Iraq",
   "specific_address": "Various locations in Iraq, Jordan, and Turkey"
 }

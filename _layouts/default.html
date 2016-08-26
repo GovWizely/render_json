@@ -4,6 +4,9 @@
   <div id="content">
     {{ content }}
   </div>
-    {% include javascript.html %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  {% for js_asset in page.js_assets %}
+  <script src="{{ site.github.url }}{{ js_asset }}"></script>
+  {% endfor %}
   </body>
 </html>

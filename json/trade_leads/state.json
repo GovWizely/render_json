@@ -2,13 +2,11 @@
   "id": "c118cb6ed4345bb33980b2dfb77303e2a561866a",
   "record_id": "DATATABLE.1667",
   "lead_source": "Post Identified Project",
-  "country_name": "Sri Lanka",
-  "country": "LK",
+  "country": "Sri Lanka",
   "specific_location": "Western Province",
   "title": "EOI Sri Lankan Airlines and Mihin Lanka",
   "project_number": "NSB/SL/1601",
-  "source_industry": "Transportation and Warehousing",
-  "industry": [
+  "industries": [
     "Transport and Logistics",
     "Distribution and Logistics"
   ],
@@ -17,8 +15,8 @@
   "tags": [
     "Airlines"
   ],
-  "publish_date": "2016-07-06T00:00:00+00:00",
-  "end_date": "2016-08-24T00:00:00+00:00",
+  "published_at": "2016-07-06T10:00:00+00:00",
+  "end_at": "2016-08-24T10:00:00+00:00",
   "funding_source": "Other",
   "borrowing_entity": "Not Applicable",
   "procurement_organization": "Ministry of Transport and Civil Aviation",
@@ -30,11 +28,11 @@
   "click_url": "http://goo.gl/9YTq4z",
   "status": "Pipeline",
   "source": "STATE",
-  "trade_region": [
+  "trade_regions": [
     "Global System of Trade Preferences among Developing Countries",
     "South Asian Association for Regional Cooperation"
   ],
-  "world_region": [
+  "world_regions": [
     "South Asia",
     "Asia"
   ]

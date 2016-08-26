@@ -1,14 +1,13 @@
 {
   "id": "f31da36bf31a196aceffd60071c4e2366795de87",
   "source": "UK",
-  "country": "GB",
-  "country_name": "United Kingdom",
+  "country": "United Kingdom",
   "record_id": "8487d77b-7b83-4ab5-bed6-11df948110fb",
   "reference_number": "BUCKSH001-DN170856-85851506",
-  "publish_date": "2016-07-12T14:09:21+00:00",
-  "deadline_date": "2016-07-26T00:00:00+00:00",
-  "contract_start_date": "2016-10-10T00:00:00+00:00",
-  "contract_end_date": "2017-08-10T00:00:00+00:00",
+  "published_at": "2016-07-12T14:09:21+00:00",
+  "deadline_at": "2016-07-26T10:00:00+00:00",
+  "contract_start_at": "2016-10-10T10:00:00+00:00",
+  "contract_end_at": "2017-08-10T10:00:00+00:00",
   "min_contract_value": 200000.0,
   "max_contract_value": 200000.0,
   "url": "http://www.buckscc.gov.uk",
@@ -20,16 +19,13 @@
   "description": "Applications to be considered for inclusion on the tender list are invited",
   "notice_type": "Contract",
   "specific_location": "Any region",
-  "trade_region": [
+  "trade_regions": [
     "European Union - 28"
   ],
-  "world_region": [
+  "world_regions": [
     "Europe"
   ],
-  "source_industry": [
-    "Construction and Real Estate"
-  ],
-  "industry": [
+  "industries": [
     "Real Estate Services",
     "Design and Construction"
   ]

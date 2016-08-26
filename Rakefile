@@ -11,7 +11,7 @@ task :build do
 
   require 'pathname'
   require 'uglifier'
-  names = %w(mappings configure json_renderer)
+  names = %w(json_renderer trade_lead_mappings trade_lead_development_configuration)
   root = Pathname.new File.expand_path('../', __FILE__)
   js_root = root.join('_site/assets/js')
   source = names.map do |name|

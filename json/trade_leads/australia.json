@@ -1,10 +1,8 @@
 {
   "id": "650c62d8d8b5fe7321a63b079e137a677638c2d4",
-  "uuid": "3CFB46F2-9693-0C82-DAFB7F2E007DEC4B",
   "agency": "Australian Communications and Media Authority (ACMA)",
   "description": "The ACMA is seeking a supplier to conduct research into local content arrangements including a regional focus.",
-  "source_industry": "80141500 - Market research",
-  "industry": [],
+  "industries": [],
   "title": "Research into local content use and understanding",
   "lodgement_address": "tenders@gov.au",
   "phone": "02) 62195109",
@@ -13,22 +11,22 @@
   "contact_officer": "Phil Freeman",
   "email": "procurementenquiries@acma.gov.au",
   "other_instructions": null,
-  "publish_date": "2016-06-21T00:00:00+00:00",
-  "end_date": "2016-07-18T00:00:00+00:00",
+  "published_at": "2016-06-21T10:00:00+00:00",
+  "end_at": "2016-07-18T10:00:00+00:00",
   "location": "ACT, NSW, VIC, SA, WA, QLD, NT, TAS\nCanberra, Sydney, Melbourne, Adelaide, Perth, Brisbane, Darwin, Hobart",
   "url": "https://www.tenders.gov.au/?event=public.atm.show\u0026ATMUUID=3CFB46F2-9693-0C82-DAFB7F2E007DEC4B",
   "click_url": "https://goo.gl/vrJFbj",
   "atm_id": "16ACMA057",
+  "atm_type":"Request for Tender",
   "panel_arrangement": "No",
   "conditions_for_participation": "Not applicable",
-  "country": "AU",
-  "country_name": "Australia",
+  "country": "Australia",
   "source": "AUSTRALIA",
-  "trade_region": [
+  "trade_regions": [
     "Trans Pacific Partnership",
     "Asia Pacific Economic Cooperation"
   ],
-  "world_region": [
+  "world_regions": [
     "Oceania",
     "Pacific Rim",
     "Asia Pacific"
