@@ -11,9 +11,14 @@ getIdString = ->
       return key_value[1]
 
 renderDate = (dateString) ->
-  date = new Date dateString
+  dateRegex = /^\d{4}-\d{2}-\d{2}/;
+  matchingDateString = dateString.match(dateRegex)
+  return unless matchingDateString?
+
+  localTime = new Date().toISOString().substr(10)
+  localizedDateTime = "#{matchingDateString[0]}#{localTime}"
   $('<span />',
-    text: date.toDateString())
+    text: new Date(localizedDateTime).toDateString())
 
 renderLink = (url, click_url) ->
   click_url = url unless click_url?
