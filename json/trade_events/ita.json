@@ -1,0 +1,87 @@
+{
+   "id":"b8e8df780b06bf5613e3a885bc8bff094236f443",
+   "event_id":"36895",
+   "start_date":"2016-10-19T00:00:00+00:00",
+   "end_date":"2016-10-21T00:00:00+00:00",
+   "url":null,
+   "click_url":null,
+   "event_type":"Trade Mission",
+   "registration_link":"https://emenuapps.ita.doc.gov/ePublic/TM/7R0L",
+   "description":"October 16-21, 2016\n\rMISSION DESCRIPTION\n\rThe United States Department of Commerce, International Trade Administration, is organizing an executive-led Healthcare Business Development Mission to China with an emphasis on the Sector.  The mission will be led by the Deputy Secretary of Commerce with participation from U.S. Department of Health and Human Services to facilitate access to the appropriate Chinese government agencies.  \n\rThe purpose of the mission is open access to Chinese government health officials and to introduce U.S. firms and trade associations to the Chinese Healthcare market as well as assist U.S. companies to find business partners and export their products and services to China. The mission is intended to include representatives from U.S. companies and U.S. trade associations with members that provide high end, innovative medical devices (especially imaging), healthcare technology equipment, innovative pharmaceuticals, hospital management or senior care management solutions, and medical education or training, hospital cooperation (i.e. management and education), as well as pharmaceuticals and senior care segments.",
+   "event_name":"HEALTHCARE BUSINESS DEVELOPMENT MISSION TO  CHINA",
+   "cost":10500.0,
+   "registration_title":"Apply for this event",
+   "source_industry":[
+      "Biotechnology",
+      "Drugs/Pharmaceuticals",
+      "Health Care Services",
+      "Information Services",
+      "Medical Eq."
+   ],
+   "industry":[
+      "Healthcare Services",
+      "Medical Biotechnology",
+      "Medical Devices",
+      "Pharmaceuticals"
+   ],
+   "source":"ITA",
+   "contacts":[
+      {
+         "email":"Dennis.Simmons@trade.gov",
+         "first_name":"Dennis",
+         "last_name":"Simmons",
+         "person_title":"Commercial Officer",
+         "phone":"+86.10.8531.3445",
+         "post":"Beijing"
+      },
+      {
+         "email":"Anne.Novak@trade.gov",
+         "first_name":"Anne Marie",
+         "last_name":"Novak",
+         "person_title":"International Trade Specialist",
+         "phone":"202-482-8178",
+         "post":"Trade Event Programs"
+      },
+      {
+         "email":"Eric.Hsu@trade.gov",
+         "first_name":"Eric",
+         "last_name":"Hsu",
+         "person_title":"Commercial Officer",
+         "phone":"86-28-8598-6661",
+         "post":"Chengdu"
+      },
+      {
+         "email":"Yolinda.Qu@trade.gov",
+         "first_name":"Yolinda",
+         "last_name":"Qu",
+         "person_title":"International Trade Specialist",
+         "phone":null,
+         "post":"OCEA"
+      },
+      {
+         "email":"Melissa.Hill@trade.gov",
+         "first_name":"Melissa",
+         "last_name":"Hill",
+         "person_title":"International Trade Specialist",
+         "phone":"212-471-0062",
+         "post":"New York"
+      },
+      {
+         "email":"Ji.Li@trade.gov",
+         "first_name":"Ji",
+         "last_name":"Li",
+         "person_title":"Commercial Assistant",
+         "phone":"(86-10) 8531-4486",
+         "post":"Beijing"
+      }
+   ],
+   "venues":[
+      {
+         "country_name":"China",
+         "country":"CN",
+         "location":"Beijing",
+         "city":"Beijing",
+         "state":null
+      }
+   ]
+}
