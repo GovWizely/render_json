@@ -2,7 +2,7 @@
 ---
 
 jQuery ->
-  $('#content').renderJSON
+  $('#content').tradeeventrenderJSON
     fieldsBySource: window.rendererTradeEventMapping.fieldsBySource,
     friendlyNames: window.rendererTradeEventMapping.friendlyNames,
     hostUrl: '/json/trade_events/',

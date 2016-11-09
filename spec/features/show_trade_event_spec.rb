@@ -21,7 +21,7 @@ RSpec.describe 'trade event', type: :feature, js: true do
       expect(find_by_id('field_start_date').text).to eq('Start date Sun Oct 23 2016')
       expect(find_by_id('field_end_date').text).to eq('End date Sun Oct 23 2016')
       expect(find_by_id('field_event_name').find('h1').text).to eq('2016 fall JJL Education Fair in Wuhan')
-      expect(find_by_id('field_url')[:href]).to eq('https://www.export.gov/tradeevent?id=45f10e82b2ba6435891722e4a484864726c1fb59') 
+      expect(find_by_id('field_registration_link')).to have_link('https://example.org/search#/search/tradeevent?id=45f10e82b2ba6435891722e4a484864726c1fb59', href: 'https://example.org/search#/search/tradeevent?id=45f10e82b2ba6435891722e4a484864726c1fb59')
       expect(find_by_id('field_description').text).to eq('This is a Post Initiative Event Agreement between the Commercial Service of the U.S. Consulate General in Wuhan (hereafter referred to as CS WH) and JJL Overseas Education Consulting &amp; Service Co., Ltd. Wuhan Branch (hereafter referred to as JJL WH) in which CS WH will help JJL WH promote its education service on Oct. 23, 2016 (Wuhan).')
       expect(find_by_id('field_event_type').find('h3').text).to eq('Post Initiated Event-Under 5k')
       expect(find_by_id('field_industries').find('h3').text).to eq('Education')

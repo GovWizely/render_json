@@ -40,10 +40,10 @@ renderLinks = (data, field) ->
 renderValue = (field, value) ->
   return unless value?
   switch field
-    when 'title' then $('<h1 />', text: value)
+    when 'event_name' then $('<h1 />', text: value)
     when 'description' then $('<div />').append(value)
     else
-      if /\_at/.test(field)
+      if /\_date/.test(field)
         renderDate value
       else if /^url/.test(field)
         renderLink value, field, data
