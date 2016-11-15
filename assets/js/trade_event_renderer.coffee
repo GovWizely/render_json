@@ -1,6 +1,30 @@
 ---
 ---
 
+template = """
+{% include_relative templates/trade_events/main.html %}
+"""
+
+contactTemplate = """
+{% include_relative templates/trade_events/contact.html %}
+"""
+
+linkTemplate = """
+{% include_relative templates/link.html %}
+"""
+
+listTemplate = """
+{% include_relative templates/list.html %}
+"""
+
+valueTemplate = """
+{% include_relative templates/value.html %}
+"""
+
+venueTemplate = """
+{% include_relative templates/trade_events/venue.html %}
+"""
+
 $ = jQuery
 
 getIdString = ->
@@ -10,6 +34,36 @@ getIdString = ->
     if key_value[0] == 'id'
       return key_value[1]
 
+escapeValue = (value) ->
+  Mustache.render valueTemplate,
+    value: value
+
+renderLink = (text, clickUrl) ->
+  clickUrl ||= text
+  Mustache.render linkTemplate,
+    href: clickUrl,
+    text: text
+
+renderArray = (items) ->
+  Mustache.render listTemplate, items: items
+
+renderContacts = (contacts) ->
+  values = []
+  for contact in contacts
+    html = Mustache.render contactTemplate, contact
+    values.push html
+  renderArray values
+
+renderCost = (costCurrency, cost) ->
+  return unless cost?
+
+  if costCurrency? && costCurrency != 'USD'
+    costPrefix = ''
+  else
+    costPrefix = '$'
+    costCurrency = ''
+  escapeValue "#{costPrefix}#{cost}#{costCurrency}"
+
 renderDate = (dateString) ->
   dateRegex = /^\d{4}-\d{2}-\d{2}/;
   matchingDateString = dateString.match(dateRegex)
@@ -17,96 +71,80 @@ renderDate = (dateString) ->
 
   localTime = new Date().toISOString().substr(10)
   localizedDateTime = "#{matchingDateString[0]}#{localTime}"
-  $('<span />',
-    text: new Date(localizedDateTime).toDateString())
+  new Date(localizedDateTime).toDateString()
 
-renderLink = (url, click_url) ->
-  click_url = url unless click_url?
-  $('<a />',
-    href: click_url,
-    text: url)
+renderIndustries = (searchUrl, industries) ->
+  return unless industries.length > 0
 
-renderLinks = (data, field) ->
-  urls = data[field]
-  return unless urls?
+  links = []
+  for industry in industries
+    params = { industries: industry }
+    searchParams = $.param params
+    url = "#{searchUrl}?#{searchParams}"
+    links.push renderLink(industry, url)
+  renderArray links
+  
+renderVenues = (venues) ->
+  values = []
+  for venue in venues
+    html = Mustache.render venueTemplate, venue
+    values.push html
+  renderArray values
 
-  urls = [urls] unless urls instanceof Array
+renderUrl = (jsonData, field, url) ->
+  clickUrlField = field.replace /url$/, 'click_url'
+  clickUrl = jsonData[clickUrlField]
+  renderLink url, clickUrl
 
-  click_urls = data["click_#{field}"]
-  click_urls = [click_urls] unless click_urls instanceof Array
-
-  renderLink url, click_urls[i] for url, i in urls
-
-renderValue = (field, value) ->
-  return unless value?
+renderValue = (config, jsonData, field, value) ->
   switch field
-    when 'title' then $('<h1 />', text: value)
-    when 'description' then $('<div />').append(value)
+    when 'contacts'
+      renderContacts value
+    when 'cost'
+      renderCost jsonData.cost_currency, value
+    when 'industries'
+      renderIndustries config.searchUrl, value
+    when 'url', 'registration_url'
+      renderUrl jsonData, field, value
+    when 'venues'
+      renderVenues value
     else
-      if /\_at/.test(field)
+      if /\_date/.test field
         renderDate value
-      else if /^url/.test(field)
-        renderLink value, field, data
-      else $('<span />', text: value)
+      else
+        value
 
-renderArray = (field, array) ->
-  return if array.length <= 0
-  $ul = $('<ul></ul>')
-  $ul.append($('<li></li>').append(renderValue(field, item)) for item in array)
-  $ul
+renderField = (config, jsonData, field) ->
+  value = jsonData[field]
+  renderValue config, jsonData, field, value if value?
 
-renderField = ($content, field, data) ->
-  value = data[field]
-  if /^url/.test(field)
-    renderedValue = renderLinks data, field
-  else if value instanceof Array
-    renderedValue = renderArray field, value
-  else
-    renderedValue = renderValue field, value
-
-  return unless renderedValue?
-  $wrapper = $('<p />', id: "field_#{field}")
-  friendlyName = $content.data('friendlyNames')[field]
-  $wrapper.append $('<div />', text: friendlyName) unless field in ['description', 'title']
-  $wrapper.append renderedValue
-  $content.append $wrapper
-
-renderTag = (searchUrl, key, value) ->
-  params = {}
-  params[key] = value
-  $params = $.param params
-
-  $link = $('<a />',
-    href: "#{searchUrl}?#{$params}",
-    text: value)
-  $('<li />').append $link
-
-renderTags = (searchUrl, data) ->
-  $listItems = []
-
-  country = data['country']
-  $listItems.push renderTag(searchUrl, 'countries', country) if country?
-
-  industries = data['industries']
-  $listItems.push renderTag(searchUrl, 'industries', industry) for industry in industries if industries?
-
-  if $listItems.length > 0
-    $tags = $('<ul />',
-      id: 'tags')
-    $tags.append $listItems
-    $tags
+buildFieldData = (config, jsonData) ->
+  fields = config.fieldsBySource[jsonData.source]
+  friendlyNames = config.friendlyNames
+  fieldData = []
+  for field in fields
+    value = renderField config, jsonData, field
+    if value?
+      friendlyName = friendlyNames[field]
+      fieldData.push
+        field: field,
+        label: friendlyName,
+        value: value
+  fieldData
 
 renderJSONResponse = (jsonData) ->
-  source = jsonData.source
   $content = $(this)
-  fields = $content.data('fieldsBySource')[source]
-  return unless fields?
-  renderField $content, field, jsonData for field in fields
-  $tags = renderTags $content.data('searchUrl'), jsonData
-  $content.append $tags if $tags?
+  config = $content.data()
+  jsonData._fields = buildFieldData config, jsonData
+
+  html = Mustache.render template,
+    jsonData
+  $content.append html
+  document.title = jsonData.name
 
 renderNotFound = ->
-  $(this).append '<p>Not Found</p>'
+  $(this).append '<p>Page Not Found</p>'
+  document.title = 'Page Not Found'
 
 requestJSON = (element, id) ->
   $element = $(element)
@@ -122,7 +160,7 @@ requestJSON = (element, id) ->
     success: renderJSONResponse,
     error: renderNotFound
 
-$.fn.tradeeventrenderJSON = (options) ->
+$.fn.renderTradeEventJSON = (options) ->
   this.each ->
     idString = getIdString()
     $this = $(this)

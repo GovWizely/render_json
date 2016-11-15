@@ -2,76 +2,84 @@ RSpec.describe 'trade event', type: :feature, js: true do
   context 'when viewing DL trade event page' do
     it 'renders fields' do
       visit '/test_trade_event.html?id=dl.json'
-      expect(find_by_id('field_event_name').find('h1').text).to eq('2016 fall JJL Education Fair in Wuhan')
-      expect(find_by_id('field_cost').text).to eq('$750')
-      expect(find_by_id('field_start_at').text).to eq('Sun Oct 23 2016')
-      expect(find_by_id('field_url')[:href]).to eq('https://www.export.gov/tradeevent?id=45f10e82b2ba6435891722e4a484864726c1fb59')
-      expect(find_by_id('field_description').text).to eq('This is a Post Initiative Event Agreement between the Commercial Service of the U.S. Consulate General in Wuhan (hereafter referred to as CS WH) and JJL Overseas Education Consulting &amp; Service Co., Ltd. Wuhan Branch (hereafter referred to as JJL WH) in which CS WH will help JJL WH promote its education service on Oct. 23, 2016 (Wuhan).')
-      expect(find_by_id('field_event_type').find('h3').text).to eq('Post Initiated Event-Under 5k')
-      expect(find_by_id('field_industries').find('h3').text).to eq('Education')
-      expect(find_by_id('field_contacts').text).to eq('Catherine Le, Wuhan Commercial Assistant 86-27-8555-7791 Catherine.Le@trade.gov')
-      expect(find_by_id('field_post').text).to eq('Wuhan, China')
+      expect(find('h1').text).to eq('Direct Line for American Businesses: Doing Business in Tunisia')
+      expect(page).to have_title('Direct Line for American Businesses: Doing Business in Tunisia')
+      expect(find_by_id('trade_event_description').text).to eq('Description Direct Line: Doing Business in Tunisia Bureau of Economic and Business Affairs November 10, 2016')
+      expect(find_by_id('trade_event_source').text).to eq('Source DL')
+      expect(find_by_id('trade_event_url')).to have_link('http://www.state.gov/e/eb/directline/events/263555.htm', href: 'https://goo.gl/zuTYZe')
     end
   end
 
   context 'when viewing ITA trade event page' do
     it 'renders fields' do
       visit '/test_trade_event.html?id=ita.json'
-      expect(find_by_id('field_cost').text).to eq('$750')
-      expect(find_by_id('field_start_date').text).to eq('Start date Sun Oct 23 2016')
-      expect(find_by_id('field_end_date').text).to eq('End date Sun Oct 23 2016')
-      expect(find_by_id('field_event_name').find('h1').text).to eq('2016 fall JJL Education Fair in Wuhan')
-      expect(find_by_id('field_url')[:href]).to eq('https://www.export.gov/tradeevent?id=45f10e82b2ba6435891722e4a484864726c1fb59') 
-      expect(find_by_id('field_description').text).to eq('This is a Post Initiative Event Agreement between the Commercial Service of the U.S. Consulate General in Wuhan (hereafter referred to as CS WH) and JJL Overseas Education Consulting &amp; Service Co., Ltd. Wuhan Branch (hereafter referred to as JJL WH) in which CS WH will help JJL WH promote its education service on Oct. 23, 2016 (Wuhan).')
-      expect(find_by_id('field_event_type').find('h3').text).to eq('Post Initiated Event-Under 5k')
-      expect(find_by_id('field_industries').find('h3').text).to eq('Education')
-      expect(find_by_id('field_contacts').text).to eq('Catherine Le, Wuhan Commercial Assistant 86-27-8555-7791 Catherine.Le@trade.gov')
-      expect(find_by_id('field_location').text).to eq('Wuhan, China')
-      expect(find_by_id('field_source').text).to eq('ITA')
+      expect(find('h1').text).to eq('Trade Event 36282')
+      expect(page).to have_title('Trade Event 36282')
+      expect(find_by_id('trade_event_description').text).to eq('Description Event 36282 description.')
+      expect(find_by_id('trade_event_event_type').text).to eq('Event Type Trade Mission')
+      expect(find_by_id('trade_event_cost').text).to eq('Cost $4400')
+      expect(find_by_id('trade_event_start_date').text).to eq('Start Date Sun May 15 2016')
+      expect(find_by_id('trade_event_end_date').text).to eq('End Date Tue May 24 2016')
+      expect(find_by_id('trade_event_registration_url')).to have_link('https://ita.trade.event.example.org/registration/36282')
+      expect(find_by_id('trade_event_venues').text).to eq('Venues Moscone Center, San Francisco San Francisco CA United States')
+      expect(find_by_id('trade_event_source').text).to eq('Source ITA')
+      expect(find_by_id('trade_event_contacts').text).to eq('Contacts John Doe Taipei Commercial Officer Phone: 886-2-1111-2222 John.Doe@example.gov Jane Doe Seoul Trade Specialist Phone: 82-2-333-4444 Jane.Doe@example.gov')
+      expect(find_by_id('trade_event_industries')).to have_link('Franchising', href: 'https://example.org/search#/search/trade_events?industries=Franchising')
+      expect(find_by_id('trade_event_url')).to have_link('https://ita.trade.event.example.org/event/36282', href: 'https://goo.gl/ita1')
     end
   end
 
   context 'when viewing SBA trade event page' do
     it 'renders fields' do
       visit '/test_trade_event.html?id=sba.json'
-      expect(find_by_id('field_event_name').find('h1').text).to eq('Vietnam Natural Gas Sector Business Briefing')
-      expect(find_by_id('field_cost').text).to eq('$495')
-      expect(find_by_id('field_start_at').text).to eq('Tues Nov 01 2016')
-      expect(find_by_id('field_ends_at').text).to eq('Thurs Nov 03 2016')
-      expect(find_by_id('field_url')[:href]).to eq('https://www.export.gov/tradeevent?id=45f10e82b2ba6435891722e4a484864726c1fb59')
-      expect(find_by_id('field_description').text).to eq('As part of the Vietnam Natural Gas Sector Reverse Trade Mission there will be a one-day Business Briefing in Houston, Texas on October 24, 2016. This Business Briefing will provide a forum for 12 high-level representatives from Vietnamâ��s energy sector to share information with U.S. companies on their needs, upcoming procurements and plans for natural gas development in Vietnam. One-on-one meetings with the delegates will be arranged for U.S. companies. Business Briefing Flyer For more information about how your company can participate, please contact David Elliott at davidelliott@kealtd.com.')
-      expect(find_by_id('field_event_type').find('h3').text).to eq('SBA Participating')
-      expect(find_by_id('field_start_time').text).to eq('8:00 AM')
-      expect(find_by_id('field_end_time').text).to eq('4:00 PM')
-      expect(find_by_id('field_time_zone').text).to eq('America/Chicago')
-      expect(find_by_id('field_registration_url')[:href]).to have_link('https://www.regonline.com/Register/Checkin.aspx?EventID=1825401', href: 'http://bit.ly/2dRnljm')     
-      expect(find_by_id('field_contacts').text).to eq('davidelliott@kealtd.com')
-      expect(find_by_id('field_location').text).to eq('Houston, TX, Texas')
-      expect(find_by_id('field_source').text).to eq('SBA')
+      expect(find('h1').text).to eq('SBA Trade Event 73022')
+      expect(page).to have_title('SBA Trade Event 73022')
+      expect(find_by_id('trade_event_description').text).to eq('Description SBA Trade Event 73022 description.')
+      expect(find_by_id('trade_event_event_type').text).to eq('Event Type Resource Partner')
+      expect(find_by_id('trade_event_cost').text).to eq('Cost $35')
+      expect(find_by_id('trade_event_start_date').text).to eq('Start Date Tue May 17 2016')
+      expect(find_by_id('trade_event_start_time').text).to eq('Start Time 8:30 AM')
+      expect(find_by_id('trade_event_end_date').text).to eq('End Date Tue May 24 2016')
+      expect(find_by_id('trade_event_end_time').text).to eq('End Time 10:30 AM')
+      expect(find_by_id('trade_event_registration_url')).to have_link('https://sba.trade.event.example.org/registration/73022', href: 'https://goo.gl/sba1')
+      expect(find_by_id('trade_event_venues').text).to eq('Venues Trade Business Councils 600 Trade Drive Trade Township PA United States Hotel TW 100 Broadway New York NY United States')
+      expect(find_by_id('trade_event_source').text).to eq('Source SBA')
+      expect(find_by_id('trade_event_contacts').text).to eq('Contacts Doe Small Business Administration Phone: 111-222-3333 john.doe@example.org')
+      expect(find_by_id('trade_event_industries')).to have_link('eCommerce Industry', href: 'https://example.org/search#/search/trade_events?industries=eCommerce+Industry')
     end
   end
 
   context 'when viewing USTDA trade event page' do
     it 'renders fields' do
       visit '/test_trade_event.html?id=ustda.json'
-      expect(find_by_id('field_event_name').find('h1').text).to eq('Vietnam Natural Gas Sector Business Briefing')
-      expect(find_by_id('field_cost').text).to eq('n/a')
-      expect(find_by_id('field_start_at').text).to eq('Mon Oct 24 2016')
-      expect(find_by_id('field_url')[:href]).to eq('https://www.export.gov/tradeevent?id=45f10e82b2ba6435891722e4a484864726c1fb59')
-      expect(find_by_id('field_description').text).to eq('As part of the Vietnam Natural Gas Sector Reverse Trade Mission there will be a one-day Business Briefing in Houston, Texas on October 24, 2016. This Business Briefing will provide a forum for 12 high-level representatives from Vietnamâ��s energy sector to share information with U.S. companies on their needs, upcoming procurements and plans for natural gas development in Vietnam. One-on-one meetings with the delegates will be arranged for U.S. companies. Business Briefing Flyer For more information about how your company can participate, please contact David Elliott at davidelliott@kealtd.com.')
-      expect(find_by_id('field_start_time').text).to eq('2:48 PM')
-      expect(find_by_id('field_end_time').text).to eq('2:48 PM')
-      expect(find_by_id('field_industries').find('h3').text).to eq('Renewable Energy')
-      expect(find_by_id('field_contacts').text).to eq('davidelliott@kealtd.com')
-      expect(find_by_id('field_location').text).to eq('Houston, TX, Texas')
-      expect(find_by_id('field_source').text).to eq('USTDA')
+      expect(find('h1').text).to eq('Vietnam Natural Gas Sector Business Briefing')
+      expect(page).to have_title('Vietnam Natural Gas Sector Business Briefing')
+      expect(find_by_id('trade_event_description').text).to eq('Description As part of the Vietnam Natural Gas Sector Reverse Trade Mission there will be a one-day Business Briefing in Houston, Texas on October 24, 2016.')
+      expect(find_by_id('trade_event_cost').text).to eq('Cost $50')
+      expect(find_by_id('trade_event_start_date').text).to eq('Start Date Sun Oct 16 2016')
+      expect(find_by_id('trade_event_end_date').text).to eq('End Date Mon Oct 24 2016')
+      expect(find_by_id('trade_event_venues').text).to eq('Venues Houston, TX Houston, TX Texas')
+      expect(find_by_id('trade_event_source').text).to eq('Source USTDA')
+      expect(find_by_id('trade_event_contacts').text).to eq('Contacts john@example.com')
+      expect(find_by_id('trade_event_industries')).to have_link('Renewable Energy', href: 'https://example.org/search#/search/trade_events?industries=Renewable+Energy')
+      expect(find_by_id('trade_event_url')).to have_link('https://www.ustda.gov/events/2016/south-and-southeast-asia/vietnam-natural-gas-sector-business-briefing', href: 'https://goo.gl/RMbxzQ')
+    end
+  end
+
+  context 'when viewing foreign currency in USTDA trade event page' do
+    it 'renders fields' do
+      visit '/test_trade_event.html?id=ustda_foreign_currency.json'
+      expect(find('h1').text).to eq('Vietnam Natural Gas Sector Business Briefing')
+      expect(page).to have_title('Vietnam Natural Gas Sector Business Briefing')
+      expect(find_by_id('trade_event_cost').text).to eq('Cost 50EUR')
     end
   end
 
   context 'when JSON data is not present' do
     it 'renders not found' do
       visit '/test_trade_event.html?id=foo.json'
-      expect(find_by_id('content').text).to eq('Not Found')
+      expect(find_by_id('content').text).to eq('Page Not Found')
+      expect(page).to have_title('Page Not Found')
     end
   end
 end

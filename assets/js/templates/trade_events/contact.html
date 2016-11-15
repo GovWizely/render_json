@@ -1,0 +1,23 @@
+{% raw %}
+<div>
+  <div>
+    {{& first_name}} {{& last_name}}
+  </div>
+  <div>
+    {{& post}}
+  </div>
+  <div>
+    {{& person_title}}
+  </div>
+  <div>
+    {{#phone}}
+    Phone: {{& .}}
+    {{/phone}}
+  </div>
+  {{#email}}
+    <div>
+      <a href="mailto:{{& .}}">{{& .}}</a>
+    </div>
+  {{/email}}
+</div>
+{% endraw %}

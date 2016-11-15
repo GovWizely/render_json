@@ -1,5 +1,5 @@
 ---
 layout: default
 js_assets:
-- /assets/js/all.js
+- /assets/js/trade_event_all.js
 ---
