@@ -7,44 +7,48 @@ $ ->
   window.rendererTradeEventMapping = {}
   window.rendererTradeEventMapping.fieldsBySource = {
     DL: [
+      'description',
       'source',
       'url'
     ],
     ITA: [
-      'event_type',
-      'cost',
       'start_date',
       'end_date',
-      'registration_url'
-      'venues',
-      'source',
-      'contacts',
+      'registration_url',
+      'description',
       'industries',
+      'source',
+      'event_type',
+      'cost',
+      'venues',
+      'contacts',
       'url'
     ],
     SBA: [
+      'start_date',
+      'end_date',
+      'registration_url',
+      'description',
+      'industries',
+      'source',
       'event_type',
       'cost',
-      'start_date',
+      'venues',
       'start_time',
-      'end_date',
       'end_time',
-      'registration_url',
-      'venues'
-      'source',
-      'contacts',
-      'industries'
+      'contacts'
     ],
     USTDA: [
-      'cost',
       'start_date',
-      'start_time',
       'end_date',
-      'end_time',
-      'venues',
-      'source',
-      'contacts',
+      'description',
       'industries',
+      'source',
+      'cost',
+      'venues',
+      'start_time',
+      'end_time',
+      'contacts',
       'url',
     ]
   }
