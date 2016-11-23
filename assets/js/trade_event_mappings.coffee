@@ -14,7 +14,6 @@ $ ->
     ITA: [
       'start_date',
       'end_date',
-      'registration_url',
       'description',
       'source',
       'event_type',
@@ -26,7 +25,6 @@ $ ->
     SBA: [
       'start_date',
       'end_date',
-      'registration_url',
       'description',
       'source',
       'event_type',

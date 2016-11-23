@@ -1,6 +1,12 @@
 {% raw %}
 <h1>{{name}}</h1>
 
+{{#_registration_url}}
+<div id="trade_event_registration_url">
+  {{& .}}
+</div>
+{{/_registration_url}}
+
 {{#_industries}}
 <div id="trade_event_industries">
   <div>

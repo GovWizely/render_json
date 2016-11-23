@@ -104,6 +104,9 @@ renderValue = (config, jsonData, field, value) ->
       renderCost jsonData.cost_currency, value
     when 'industries'
       renderIndustries config.searchUrl, value
+    when 'registration_url'
+      clickUrl = jsonData.registration_click_url || value
+      renderLink 'Register', clickUrl
     when 'url', 'registration_url'
       renderUrl jsonData, field, value
     when 'venues'
@@ -137,6 +140,7 @@ renderJSONResponse = (jsonData) ->
   config = $content.data()
   jsonData._fields = buildFieldData config, jsonData
   jsonData._industries = renderField config, jsonData, 'industries'
+  jsonData._registration_url = renderField config, jsonData, 'registration_url'
 
   html = Mustache.render template,
     jsonData
