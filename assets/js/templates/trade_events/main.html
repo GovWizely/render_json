@@ -1,12 +1,43 @@
 {% raw %}
-<h1>{{name}}</h1>
+<div class="main" id="content">
+            <div id="background_img">
+                <div class="section clearfix purple-bg-ita-img">
+                <div>
+                    <div class="row content">
+                         <div class="containerInternal enforceHeight" >
 
+<div class="row" id="introimg">
+  <div class="col-md-10 pad-left-zero" >
+
+<h1>{{name}}</h1></br></br>
+<h3>{{source}}</h3>
 {{#_registration_url}}
 <div id="trade_event_registration_url">
   {{& .}}
 </div>
 {{/_registration_url}}
 
+</div>
+</div>
+
+
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="row content">
+            <div class="containerInternal enforceHeight">
+
+<div class="col-md-7 pad-left-zero">
+<div id="trade_event_description">
+    <span>
+    Description
+  </span>
+  <div>{{& description}}</div>
+</div>
+</br></br>
 {{#_industries}}
 <div id="trade_event_industries">
   <div>
@@ -14,9 +45,14 @@
   </div>
 </div>
 {{/_industries}}
+</div>
 
+<div class="col-md-4 col-md-offset-1 pad-right-zero">
+</br>
+  <div class="well">
+    <h4>Details</h4>
 {{#_fields}}
-<div id="trade_event_{{field}}">
+<div id="trade_event_{{field}}" class="field_block">
   <span>
     {{label}}
   </span>
@@ -25,4 +61,11 @@
   </div>
 </div>
 {{/_fields}}
+ </div>
+            
+            </div>
+            </div>
+            </div>
+
+
 {% endraw %}
