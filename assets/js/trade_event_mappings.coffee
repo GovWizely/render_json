@@ -7,14 +7,12 @@ $ ->
   window.rendererTradeEventMapping = {}
   window.rendererTradeEventMapping.fieldsBySource = {
     DL: [
-      'description',
       'source',
       'url'
     ],
     ITA: [
       'start_date',
       'end_date',
-      'description',
       'source',
       'event_type',
       'cost',
@@ -25,7 +23,6 @@ $ ->
     SBA: [
       'start_date',
       'end_date',
-      'description',
       'source',
       'event_type',
       'cost',
@@ -37,7 +34,6 @@ $ ->
     USTDA: [
       'start_date',
       'end_date',
-      'description',
       'source',
       'cost',
       'venues',

@@ -4,7 +4,7 @@ RSpec.describe 'trade event', type: :feature, js: true do
       visit '/test_trade_event.html?id=dl.json'
       expect(find('h1').text).to eq('Direct Line for American Businesses: Doing Business in Tunisia')
       expect(page).to have_title('Direct Line for American Businesses: Doing Business in Tunisia')
-      expect(find_by_id('trade_event_description').text).to eq('Direct Line: Doing Business in Tunisia Bureau of Economic and Business Affairs November 10, 2016')
+      expect(find_by_id('trade_event_description').text).to eq('Description Direct Line: Doing Business in Tunisia Bureau of Economic and Business Affairs November 10, 2016')
       expect(find_by_id('trade_event_source').text).to eq('Source DL')
       expect(find_by_id('trade_event_url')).to have_link('http://www.state.gov/e/eb/directline/events/263555.htm', href: 'https://goo.gl/zuTYZe')
     end
@@ -15,7 +15,7 @@ RSpec.describe 'trade event', type: :feature, js: true do
       visit '/test_trade_event.html?id=ita.json'
       expect(find('h1').text).to eq('Trade Event 36282')
       expect(page).to have_title('Trade Event 36282')
-      expect(find_by_id('trade_event_description').text).to eq('Event 36282 description.')
+      expect(find_by_id('trade_event_description').text).to eq('Description Event 36282 description.')
       expect(find_by_id('trade_event_event_type').text).to eq('Event Type Trade Mission')
       expect(find_by_id('trade_event_cost').text).to eq('Cost $4400')
       expect(find_by_id('trade_event_start_date').text).to eq('Start Date Sun May 15 2016')
@@ -34,7 +34,7 @@ RSpec.describe 'trade event', type: :feature, js: true do
       visit '/test_trade_event.html?id=sba.json'
       expect(find('h1').text).to eq('SBA Trade Event 73022')
       expect(page).to have_title('SBA Trade Event 73022')
-      expect(find_by_id('trade_event_description').text).to eq('SBA Trade Event 73022 description.')
+      expect(find_by_id('trade_event_description').text).to eq('Description SBA Trade Event 73022 description.')
       expect(find_by_id('trade_event_event_type').text).to eq('Event Type Resource Partner')
       expect(find_by_id('trade_event_cost').text).to eq('Cost $35')
       expect(find_by_id('trade_event_start_date').text).to eq('Start Date Tue May 17 2016')
@@ -54,7 +54,7 @@ RSpec.describe 'trade event', type: :feature, js: true do
       visit '/test_trade_event.html?id=ustda.json'
       expect(find('h1').text).to eq('Vietnam Natural Gas Sector Business Briefing')
       expect(page).to have_title('Vietnam Natural Gas Sector Business Briefing')
-      expect(find_by_id('trade_event_description').text).to eq('As part of the Vietnam Natural Gas Sector Reverse Trade Mission there will be a one-day Business Briefing in Houston, Texas on October 24, 2016.')
+      expect(find_by_id('trade_event_description').text).to eq('Description As part of the Vietnam Natural Gas Sector Reverse Trade Mission there will be a one-day Business Briefing in Houston, Texas on October 24, 2016.')
       expect(find_by_id('trade_event_cost').text).to eq('Cost $50')
       expect(find_by_id('trade_event_start_date').text).to eq('Start Date Sun Oct 16 2016')
       expect(find_by_id('trade_event_end_date').text).to eq('End Date Mon Oct 24 2016')
