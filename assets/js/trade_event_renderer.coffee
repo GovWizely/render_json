@@ -136,6 +136,7 @@ renderJSONResponse = (jsonData) ->
   $content = $(this)
   config = $content.data()
   jsonData._fields = buildFieldData config, jsonData
+  jsonData._industries = renderField config, jsonData, 'industries'
 
   html = Mustache.render template,
     jsonData

@@ -1,6 +1,14 @@
 {% raw %}
 <h1>{{name}}</h1>
 
+{{#_industries}}
+<div id="trade_event_industries">
+  <div>
+    {{& .}}
+  </div>
+</div>
+{{/_industries}}
+
 {{#_fields}}
 <div id="trade_event_{{field}}">
   <span>
