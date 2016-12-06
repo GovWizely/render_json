@@ -25,6 +25,10 @@ venueTemplate = """
 {% include_relative templates/trade_events/venue.html %}
 """
 
+pageNotFoundTemplate = """
+{% include_relative templates/page_not_found.html %}
+"""
+
 $ = jQuery
 
 getIdString = ->
@@ -139,8 +143,8 @@ renderJSONResponse = (jsonData) ->
   $content = $(this)
   config = $content.data()
   jsonData._fields = buildFieldData config, jsonData
-  jsonData._industries = renderField config, jsonData, 'industries'
-  jsonData._registration_url = renderField config, jsonData, 'registration_url'
+  for field in ['cost', 'industries', 'registration_url', 'start_date', 'end_date']
+    jsonData["_#{field}"] = renderField config, jsonData, field
 
   html = Mustache.render template,
     jsonData
@@ -148,7 +152,7 @@ renderJSONResponse = (jsonData) ->
   document.title = jsonData.name
 
 renderNotFound = ->
-  $(this).append '<p>Page Not Found</p>'
+  $(this).append pageNotFoundTemplate
   document.title = 'Page Not Found'
 
 requestJSON = (element, id) ->
