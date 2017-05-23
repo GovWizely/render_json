@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/trade_event.css" />
+</head>
+<body>
+<div id="content">
+  {{ content }}
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+{% for js_asset in page.js_assets %}
+<script src="{{ site.github.url }}{{ js_asset }}"></script>
+{% endfor %}
+</body>
+</html>

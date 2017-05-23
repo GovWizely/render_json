@@ -29,8 +29,9 @@ task :build do
   names = %w(json_renderer trade_lead_mappings trade_lead_development_configuration)
   JSFileConcatenator.concat 'all', *names
 
-  names = %w(mustache trade_event_mappings trade_event_renderer trade_event_development_configuration)
-  JSFileConcatenator.concat 'trade_event_all', *names
+  trade_event_filenames = %w(mustache trade_event_mappings trade_event_renderer)
+  JSFileConcatenator.concat 'trade_event_production.min', *(trade_event_filenames + ['trade_event_development_configuration'])
+  JSFileConcatenator.concat 'trade_event_staging.min', *(trade_event_filenames + ['trade_event_staging_configuration'])
 end
 
 RSpec::Core::RakeTask.new(:spec)

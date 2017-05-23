@@ -21,7 +21,8 @@ $ ->
       'source',
       'event_type',
       'venues',
-      'contacts'
+      'contacts',
+      'url'
     ],
     USTDA: [
       'source',
@@ -36,7 +37,6 @@ $ ->
     event_type: 'Event Type',
     first_name: 'First Name',
     industries: 'Industries',
-    registration_url: 'Registration URL',
     source: 'Source',
-    url: 'URL'
+    url: 'More Information'
     venues: 'Venues'}

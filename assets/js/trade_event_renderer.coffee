@@ -142,8 +142,13 @@ buildFieldData = (config, jsonData) ->
 renderJSONResponse = (jsonData) ->
   $content = $(this)
   config = $content.data()
+
+  unless jsonData.url?
+    jsonData.url = jsonData.registration_url
+    jsonData.click_url = jsonData.registration_click_url
+
   jsonData._fields = buildFieldData config, jsonData
-  for field in ['cost', 'industries', 'registration_url', 'start_date', 'end_date']
+  for field in ['cost', 'industries', 'start_date', 'end_date']
     jsonData["_#{field}"] = renderField config, jsonData, field
 
   html = Mustache.render template,

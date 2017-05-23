@@ -30,3 +30,7 @@ exclude:
 - spec
 - tasks
 - vendor
+
+sass:
+  sass_dir: assets/_sass
+  style: compressed

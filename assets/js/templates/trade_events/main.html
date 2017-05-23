@@ -1,127 +1,70 @@
 {% raw %}
-<div class="main" id="content">
-  <div id="background_img">
-    <div class="section clearfix purple-bg-ita-img">
+<div id="trade_event">
+  <div class="tradeEventHeadingWrapper">
+    <div class="tradeEventHeading">
       <div>
-        <div class="row content">
-          <div class="containerInternal enforceHeight">
-            <div class="row" id="introimg">
-              <div class="col-md-10 pad-left-zero">
-                <h1>{{name}}</h1>
-                <br/>
-                {{#_registration_url}}
-                <div id="trade_event_registration_url">
-                  {{& .}}
-                </div>
-                {{/_registration_url}}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row content">
-    <div class="containerInternal enforceHeight">
-      <div class="col-md-7 pad-left-zero">
-        <div id="trade_event_description">
-          <span>
-            Description
-          </span>
-          <div>{{& description}}</div>
-        </div>
-        <br/>
-        <hr>
-
-      <div class="row content_body" id="pad_zero">
         {{#_start_date}}
-        <br/>
-        <div id="trade_event_start_date" class="col-md-4 pad-left-zero">
-          <span>
-            Start Date
-          </span>
-          <div>
-            <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp; {{& .}}
-          </div>
-        </div>
+        <span class="tradeEventLabel">Start Date</span>
+        <span id="trade_event_start_date">
+          {{& .}}
+        </span>
         {{/_start_date}}
 
         {{#_end_date}}
-        <div id="trade_event_end_date" class="col-md-4 pad-right-zero">
-          <span>
-            End Date
-          </span>
-          <div>
-            <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp; {{& .}}
-          </div>
-        </div>
+        <span class="tradeEventLabel">End Date</span>
+        <span id="trade_event_end_date">
+          - {{& .}}
+        </span>
         {{/_end_date}}
       </div>
-      
-      <div class="row content_body" id="pad_zero">
+
+      <div>
         {{#start_time}}
-       <br/>
-        <div id="trade_event_start_time" class="col-md-4 pad-left-zero">
-          <span>
-            Start Time
-          </span>
-          <div>
-            <i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp; {{& .}}
-          </div>
-        </div>
+        <span class="tradeEventLabel">Start Time</span>
+        <span id="trade_event_start_time">
+          {{& .}}
+        </span>
         {{/start_time}}
 
         {{#end_time}}
-        <div id="trade_event_end_time" class="col-md-4 pad-right-zero">
-          <span>
-            End Time
-          </span>
-          <div>
-            <i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp; {{& .}}
-          </div>
-        </div>
+        <span class="tradeEventLabel">End Time</span>
+        <span id="trade_event_end_time">
+          - {{& .}}
+        </span>
         {{/end_time}}
+      </div>
+
+      <h1 id="trade_event_name">{{name}}</h1>
+    </div>
+  </div>
+
+  <div class="tradeEventWrapper">
+    <div class="tradeEventDescriptionAndIndustriesWrapper">
+      <div id="trade_event_description_and_industries">
+        <div id="trade_event_description">
+          <span>Description</span>
+          <div>{{& description}}</div>
         </div>
 
-        {{#_cost}}
-        <br/>
-        <hr>
-        <div id="trade_event_cost" class="content_body">
-          <br/>
-          <span>
-            Cost
-          </span>
-          <div>
-            {{& .}}
-          </div>
-        </div>
-        {{/_cost}}
-        <br/>
         {{#_industries}}
-        <hr>
-        <br/>
         <div id="trade_event_industries">
+          <span>Related Events</span>
           <div>
             {{& .}}
           </div>
         </div>
         {{/_industries}}
       </div>
+    </div>
 
-      <div class="col-md-4 col-md-offset-1 pad-right-zero">
-        <div class="well">
-          {{#_fields}}
-          <div id="trade_event_{{field}}" class="field_block">
-            <span>
-              {{label}}
-            </span>
-            <div>
-              {{& value}}
-            </div>
-          </div>
-          {{/_fields}}
+    <div class="tradeEventFieldsWrapper">
+      <div id="trade_event_fields">
+        {{#_fields}}
+        <div id="trade_event_{{field}}" class="tradeEventFieldBlock">
+          <span>{{label}}</span>
+          <div>{{& value}}</div>
         </div>
+        {{/_fields}}
       </div>
     </div>
   </div>

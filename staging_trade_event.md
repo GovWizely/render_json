@@ -1,8 +1,5 @@
 ---
-layout: default
+layout: trade_event
 js_assets:
-- /assets/js/mustache.js
-- /assets/js/trade_event_renderer.js
-- /assets/js/trade_event_mappings.js
-- /assets/js/trade_event_staging_configuration.js
+- /assets/js/trade_event_staging.min.js
 ---
