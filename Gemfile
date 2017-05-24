@@ -9,7 +9,10 @@ gem 'poltergeist'
 gem 'pry'
 gem 'rack-jekyll'
 gem 'rake'
-gem 'rspec'
 gem 'therubyracer', platforms: :ruby
 gem 'uglifier'
+
+group :test do
+  gem 'rspec'
+end
 

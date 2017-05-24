@@ -139,6 +139,11 @@ buildFieldData = (config, jsonData) ->
         value: value
   fieldData
 
+decodeHTML = (str) ->
+  e = document.createElement 'div'
+  e.innerHTML = str
+  if (e.childNodes.length is 0) then '' else e.childNodes[0].nodeValue
+
 renderJSONResponse = (jsonData) ->
   $content = $(this)
   config = $content.data()
@@ -154,7 +159,7 @@ renderJSONResponse = (jsonData) ->
   html = Mustache.render template,
     jsonData
   $content.append html
-  document.title = jsonData.name
+  document.title = decodeHTML jsonData.name
 
 renderNotFound = ->
   $(this).append pageNotFoundTemplate

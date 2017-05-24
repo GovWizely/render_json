@@ -70,6 +70,14 @@ RSpec.describe 'trade event', type: :feature, js: true do
     end
   end
 
+  context 'when viewing title with ampersand' do
+    it 'renders ampersand and not &amp;' do
+      visit '/test_trade_event.html?id=title_with_ampersand.json'
+      expect(find('h1').text).to eq('foo & bar')
+      expect(page).to have_title('foo & bar')
+    end
+  end
+
   context 'when JSON data is not present' do
     it 'renders not found' do
       visit '/test_trade_event.html?id=foo.json'
