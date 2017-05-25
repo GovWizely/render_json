@@ -6,7 +6,7 @@ RSpec.describe 'trade event', type: :feature, js: true do
       expect(page).to have_title('Direct Line for American Businesses: Doing Business in Tunisia')
       expect(find_by_id('trade_event_description').text).to eq('Description Direct Line: Doing Business in Tunisia Bureau of Economic and Business Affairs November 10, 2016')
       expect(find_by_id('trade_event_source').text).to eq('Source DL')
-      expect(find_by_id('trade_event_url')).to have_link('http://www.state.gov/e/eb/directline/events/263555.htm', href: 'https://goo.gl/zuTYZe')
+      expect(find_by_id('trade_event_url')).to have_link('More information including potential costs', href: 'https://goo.gl/zuTYZe')
     end
   end
 
@@ -23,7 +23,7 @@ RSpec.describe 'trade event', type: :feature, js: true do
       expect(find_by_id('trade_event_source').text).to eq('Source ITA')
       expect(find_by_id('trade_event_contacts').text).to eq('Contacts John Doe Taipei Commercial Officer Phone: 886-2-1111-2222 John.Doe@example.gov Jane Doe Seoul Trade Specialist Phone: 82-2-333-4444 Jane.Doe@example.gov')
       expect(find_by_id('trade_event_industries')).to have_link('Franchising', href: 'https://example.org/search#/search/trade_events?industries=Franchising')
-      expect(find_by_id('trade_event_url')).to have_link('https://ita.trade.event.example.org/event/36282', href: 'https://goo.gl/ita1')
+      expect(find_by_id('trade_event_url')).to have_link('More information including potential costs', href: 'https://goo.gl/ita1')
     end
   end
 
@@ -38,11 +38,11 @@ RSpec.describe 'trade event', type: :feature, js: true do
       expect(find_by_id('trade_event_start_time').text).to eq('8:30 AM')
       expect(find_by_id('trade_event_end_date').text).to eq('- TUE MAY 24 2016')
       expect(find_by_id('trade_event_end_time').text).to eq('- 10:30 AM')
-      expect(find_by_id('trade_event_url')).to have_link('https://sba.trade.event.example.org/registration/73022', href: 'https://goo.gl/sba1')
       expect(find_by_id('trade_event_venues').text).to eq('Venues Trade Business Councils 600 Trade Drive Trade Township PA United States Hotel TW 100 Broadway New York NY United States')
       expect(find_by_id('trade_event_source').text).to eq('Source SBA')
       expect(find_by_id('trade_event_contacts').text).to eq('Contacts Doe Small Business Administration Phone: 111-222-3333 john.doe@example.org')
       expect(find_by_id('trade_event_industries')).to have_link('eCommerce Industry', href: 'https://example.org/search#/search/trade_events?industries=eCommerce+Industry')
+      expect(find_by_id('trade_event_url')).to have_link('More information including potential costs', href: 'https://goo.gl/sba1')
     end
   end
 
@@ -58,7 +58,7 @@ RSpec.describe 'trade event', type: :feature, js: true do
       expect(find_by_id('trade_event_source').text).to eq('Source USTDA')
       expect(find_by_id('trade_event_contacts').text).to eq('Contacts john@example.com')
       expect(find_by_id('trade_event_industries')).to have_link('Renewable Energy', href: 'https://example.org/search#/search/trade_events?industries=Renewable+Energy')
-      expect(find_by_id('trade_event_url')).to have_link('https://www.ustda.gov/events/2016/south-and-southeast-asia/vietnam-natural-gas-sector-business-briefing', href: 'https://goo.gl/RMbxzQ')
+      expect(find_by_id('trade_event_url')).to have_link('More information including potential costs', href: 'https://goo.gl/RMbxzQ')
     end
   end
 

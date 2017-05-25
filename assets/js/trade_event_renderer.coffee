@@ -98,7 +98,8 @@ renderVenues = (venues) ->
 renderUrl = (jsonData, field, url) ->
   clickUrlField = field.replace /url$/, 'click_url'
   clickUrl = jsonData[clickUrlField]
-  renderLink url, clickUrl
+  clickUrl ||= url
+  renderLink 'More information including potential costs', clickUrl
 
 renderValue = (config, jsonData, field, value) ->
   switch field

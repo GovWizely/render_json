@@ -28,7 +28,7 @@ $ ->
       'source',
       'venues',
       'contacts',
-      'url',
+      'url'
     ]
   }
 
@@ -38,5 +38,4 @@ $ ->
     first_name: 'First Name',
     industries: 'Industries',
     source: 'Source',
-    url: 'More Information'
     venues: 'Venues'}

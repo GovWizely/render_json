@@ -61,7 +61,9 @@
       <div id="trade_event_fields">
         {{#_fields}}
         <div id="trade_event_{{field}}" class="tradeEventFieldBlock">
-          <span>{{label}}</span>
+          {{#label}}
+          <span>{{.}}</span>
+          {{/label}}
           <div>{{& value}}</div>
         </div>
         {{/_fields}}
