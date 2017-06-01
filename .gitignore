@@ -1,5 +1,6 @@
 .bundle
 .ruby-version
+_dist
 _site
 .sass-cache
 /spec/examples.txt

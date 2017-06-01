@@ -223,6 +223,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    rubyzip (1.2.1)
     safe_yaml (1.0.4)
     sass (3.4.23)
     sawyer (0.8.1)
@@ -262,8 +263,9 @@ DEPENDENCIES
   rack-jekyll
   rake
   rspec
+  rubyzip
   therubyracer
   uglifier
 
 BUNDLED WITH
-   1.14.6
+   1.15.0

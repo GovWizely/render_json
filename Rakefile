@@ -21,6 +21,27 @@ module JSFileConcatenator
   end
 end
 
+module ZipBuilder
+  def self.build_trade_event_zip(root, environment)
+    require 'zip'
+    zip_file_name = root.join("_dist/trade_event_#{environment}.zip")
+    Zip::File.open zip_file_name, Zip::File::CREATE do |zip_file|
+      zip_file.add 'css/trade_event.css', root.join('_site/assets/css/trade_event.css')
+      zip_file.add 'js/trade_event.min.js', root.join("assets/js/trade_event_#{environment}.min.js")
+    end
+  end
+end
+
+desc 'build staging and production assets zip'
+task zip: :build do
+  root = Pathname.new File.expand_path('../', __FILE__)
+  dist = root.join '_dist'
+  FileUtils.remove_dir(dist) if Dir.exists?(dist)
+  FileUtils.mkdir root.join('_dist')
+  ZipBuilder.build_trade_event_zip root, 'staging'
+  ZipBuilder.build_trade_event_zip root, 'production'
+end
+
 desc 'build minified Javascript'
 task :build do
   `bundle exec jekyll clean`
@@ -34,5 +55,7 @@ task :build do
   JSFileConcatenator.concat 'trade_event_staging.min', *(trade_event_filenames + ['trade_event_staging_configuration'])
 end
 
+
+
 RSpec::Core::RakeTask.new(:spec)
-task default: [:build, :spec]
+task default: [:zip, :spec]
